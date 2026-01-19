@@ -485,8 +485,8 @@ p {
     gap: 1rem;
     position: absolute;
     top: 80px;
-    background-color: #000;
-    border: 1px solid #1c1c1c;
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -505,6 +505,12 @@ p {
     margin: 0 auto;
     right: 0.5rem;
     z-index: 999999;
+  }
+
+  .nav-links a,
+  .nav-links .dropdown-toggle,
+  .nav-links .text-B2 {
+    color: #181d27;
   }
 
   .cta-btn-mobile {
@@ -1113,12 +1119,30 @@ button {
   }
 }
 
+.logo-stack {
+  width: 100%;
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .logo-stack {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .content-wrapper {
     flex-direction: column-reverse; /* Form on top */
     padding: 40px 32px;
     gap: 48px;
     align-items: center;
+  }
+  .slider {
+    display: none;
   }
   .left-content {
     text-align: left; /* Kept left aligned per user request */
@@ -1467,12 +1491,20 @@ button {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .grid-cards {
     grid-template-columns: 1fr;
   }
+  /* Card heading uses h6 styling on mobile */
   .card-heading {
     font-size: 24px;
+    line-height: 36px;
+    font-weight: 500;
+  }
+  /* Card description uses text-B2 styling on mobile */
+  .card-desc {
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
@@ -1629,8 +1661,21 @@ button {
     height: 56px;
     width: auto;
   }
+  /* Feedback heading uses h6 styling on mobile */
   .feedback-text-content .section-heading {
-    font-size: 32px;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 500;
+  }
+  /* Feedback description uses text-B2 styling on mobile */
+  .feedback-text-content .text-T1 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  /* Testimonial card text uses text-B2 styling on mobile */
+  .testimonial-card > .text-T1 {
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
@@ -1901,14 +1946,14 @@ button {
   flex: 3;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 32px;
+  gap: 24px;
 }
 
 .footer-heading {
   font-size: 18px;
   font-weight: 600;
   color: var(--color-blue);
-  margin-bottom: 24px;
+  margin-bottom: 8px;
 }
 
 .footer-links {
@@ -1916,12 +1961,16 @@ button {
 }
 
 .footer-links li {
-  margin-bottom: 12px;
+  margin-bottom: 5px;
 }
 
 .footer-links a {
+  /* L1 styling above 768px */
+  font-family: var(--font-primary);
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 0;
   color: #0b1220;
   transition: color 0.3s ease;
 }
@@ -1932,14 +1981,18 @@ button {
 
 .footer-bottom {
   border-top: 1px solid #eaecf0;
-  padding-top: 32px;
+  /* padding-top: 32px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* Copyright uses C1 styling */
 .copyright {
-  font-size: 14px;
+  font-family: var(--font-inter);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
   color: #667085;
 }
 
@@ -1983,11 +2036,11 @@ button {
 @media (max-width: 768px) {
   .footer-links-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 40px 24px;
+    gap: 24px;
   }
 
   .footer-bottom {
-    flex-direction: column-reverse;
+    flex-direction: column;
     gap: 24px;
     align-items: center;
     text-align: center;
@@ -2001,6 +2054,18 @@ button {
     background-color: #f5f5f5;
     padding: 24px;
     border-radius: 12px;
+  }
+
+  /* Footer description uses text-B2 on mobile */
+  .footer-logo-section .text-T1 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  /* Footer links use L2 styling on mobile */
+  .footer-links a {
+    font-size: 14px;
+    line-height: 20px;
   }
 }
 
