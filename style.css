@@ -782,23 +782,27 @@ button {
 
 /* ========== HERO SECTION (REDESIGNED) ========== */
 
+/* ========== HERO SECTION (REDESIGNED) ========== */
+
 .hero-section {
   position: relative;
-  margin-top: 80px;
-  /* background: red; */
+  /* margin-top: clamp(60px, 5vh, 100px); */
+  padding-top: clamp(80px, 8vh, 120px);
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: visible;
+  min-height: 100vh;
+  justify-content: center; /* Center vertically within viewport */
 }
 
 .bg-rod-container {
   position: absolute;
-  /* top: -80px; Offset the hero margin */
+  top: 0;
   left: 0;
   width: 100%;
   z-index: -1;
-  height: 100%; /* Default match hero height */
+  height: 100%;
   overflow: hidden;
   pointer-events: none;
 }
@@ -853,18 +857,18 @@ button {
 .content-wrapper {
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
-  gap: 60px;
-  padding: 80px 100px;
-  /* height: 90vh; */
+  align-items: center; /* Aligns form and text vertically */
+  gap: clamp(40px, 4vw, 80px); /* Fluid gap */
+  padding: clamp(20px, 3vh, 60px) clamp(20px, 5vw, 100px); /* Fluid padding */
+  width: 100%;
+  max-width: 1920px; /* Ensure it doesn't stretch too wide on huge screens */
 }
 
 .left-content {
   flex: 1;
   display: flex;
-  /* justify-content: center; */
   flex-direction: column;
-  /* align-items: center; */
+  justify-content: center;
   height: 100%;
   text-align: left;
 }
@@ -872,65 +876,74 @@ button {
 .hero-bullets {
   list-style: none;
   padding: 0;
-  margin: 32px 0 48px;
+  margin: clamp(24px, 2.5vh, 48px) 0 clamp(32px, 3vh, 48px); /* Fluid margin */
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: clamp(12px, 1.2vh, 16px); /* Fluid gap */
 }
 
 .bullet-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 12px;
 }
 
+.bullet-item span {
+  font-size: clamp(14px, 1.1vw, 18px); /* Fluid font size */
+  line-height: 1.5;
+}
+
 .bullet-icon {
-  width: 24px;
-  height: 24px;
+  width: clamp(20px, 1.5vw, 24px); /* Fluid icon size */
+  height: auto;
+  flex-shrink: 0;
+  margin-top: 2px;
 }
 
 .hero-trust-logos {
   display: flex;
   gap: 24px;
   align-items: center;
-  margin: 40px 0;
+  margin: clamp(24px, 2vh, 40px) 0; /* Fluid margin */
 }
 
 .hero-trust-logos img {
-  height: 63px;
+  height: clamp(40px, 3vw, 63px); /* Fluid logo height */
   width: auto;
 }
 
 .main-heading {
-  /* Inherits from global h1 */
-  margin-bottom: 24px;
+  /* Fluid main heading */
+  font-size: clamp(40px, 3.5vw, 64px);
+  line-height: 1.2;
+  margin-bottom: clamp(16px, 2vh, 24px);
 }
 
 .first-word {
   color: #254cf8;
 }
 
-.sub-text {
-  /* Inherits from global p */
-  max-width: 800px;
-  margin: 0 auto 60px;
+.left-content h4 {
+  font-size: clamp(20px, 1.5vw, 28px);
+  font-weight: 500;
+  color: #101828;
+  margin: 0;
 }
 
 /* Demo Form Container */
 .hero-demo-form-container {
-  flex: 1;
+  flex: 0 0 clamp(450px, 40vw, 600px); /* Fluid width basis */
   display: flex;
   background: rgba(248, 251, 255, 0.3);
   backdrop-filter: blur(10px);
   border-radius: 32px;
   box-shadow: 0 0 55.7px 0 rgba(126, 168, 251, 0.4);
-  /* min-height: 604px;  */
   height: min-content;
   margin: 0;
-  width: 100%;
+  /* width: 100%; removed to let flex basis work */
   z-index: 10;
   text-align: left;
-  padding: 32px;
+  padding: clamp(24px, 2vw, 40px); /* Fluid padding */
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
@@ -941,18 +954,20 @@ button {
 .form-fields-wrapper h4 {
   margin-bottom: 12px;
   color: #101828;
+  font-size: clamp(24px, 2vw, 32px); /* Fluid heading */
 }
 
 .form-fields-wrapper p {
   color: #475467;
-  margin-bottom: 32px;
+  margin-bottom: clamp(20px, 2vh, 32px);
   line-height: 1.5;
+  font-size: clamp(14px, 1vw, 16px);
 }
 
 .demo-form {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: clamp(16px, 1.5vh, 24px);
 }
 
 .form-row {
@@ -964,21 +979,21 @@ button {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 
 .form-group label {
-  font-size: 14px;
+  font-size: clamp(12px, 0.9vw, 14px);
   font-weight: 500;
   color: #344054;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .form-group input {
-  padding: 10px 14px;
+  padding: clamp(8px, 0.8vh, 12px) 14px;
   border: 1px solid #d0d5dd;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: clamp(13px, 0.9vw, 16px);
   outline: none;
   transition: all 0.2s;
   width: 100%;
@@ -996,6 +1011,7 @@ button {
 .form-footer {
   display: flex;
   justify-content: flex-end;
+  margin-top: 8px;
 }
 
 .form-footer > .btn-wrapper {
@@ -1006,6 +1022,8 @@ button {
   margin-top: 0;
   margin-bottom: 0;
   color: #fff;
+  padding: clamp(10px, 1vh, 14px) clamp(20px, 2vw, 28px);
+  font-size: clamp(14px, 1vw, 16px);
 }
 
 .zero-margin {
@@ -1077,6 +1095,14 @@ button {
   }
   .slider {
     width: 90%;
+  }
+}
+
+@media (max-width: 1550px) and (min-width: 1021px) {
+  .main-heading {
+    /* Slightly reduced fluid size for this specific range */
+    font-size: clamp(36px, 3.2vw, 54px);
+    line-height: 1.25;
   }
 }
 
