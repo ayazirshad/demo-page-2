@@ -31,17 +31,19 @@
   --btn-hover: var(--color-accent-hover);
   --btn-text: var(--color-primary);
 
-  /* Horizontal Padding */
-  --section-px: 100px;
+  /* Horizontal Padding (Mobile first: 20px) */
+  --section-px: 2rem;
 }
 
 @media (min-width: 640px) {
   :root {
-    --section-px: 1.75rem;
+    /* Tablet: 32px */
+    --section-px: 2rem;
   }
 }
 @media (min-width: 768px) {
   :root {
+    /* Desktop start: 48px */
     --section-px: 3rem;
   }
 }
@@ -267,6 +269,14 @@ h5 {
   color: #000000;
 }
 
+h6 {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  color: #000000;
+}
+
 p {
   font-family: var(--font-inter);
   font-weight: 400;
@@ -373,8 +383,8 @@ p {
   z-index: 50;
   position: fixed;
   background-color: var(--color-bg);
-  padding-left: var(--section-px);
-  padding-right: var(--section-px);
+  /* padding-left: var(--section-px);
+  padding-right: var(--section-px); */
 }
 
 .nav-container {
@@ -388,7 +398,7 @@ p {
   font-weight: 500;
   line-height: 24px;
   color: #535862;
-  padding: 16px 0px;
+  padding: 16px var(--section-px);
 }
 
 .h-screen {
@@ -435,7 +445,6 @@ p {
 }
 
 .toggle-btn img {
-  filter: invert(1);
   height: 24px;
 }
 
@@ -763,16 +772,17 @@ button {
 
 .hero-section {
   position: relative;
-  /* background-color: #fff; */ /* Removed to show bg-rods */
   margin-top: 80px;
+  /* background: red; */
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: visible;
 }
+
 .bg-rod-container {
   position: absolute;
-  top: -80px; /* Offset the hero margin */
+  /* top: -80px; Offset the hero margin */
   left: 0;
   width: 100%;
   z-index: -1;
@@ -783,7 +793,7 @@ button {
 
 @media (min-width: 1920px) {
   .bg-rod-container {
-    height: 90vh;
+    /* height: 90vh; */
   }
 }
 
@@ -1053,6 +1063,9 @@ button {
     font-size: 48px;
     line-height: 56px;
   }
+  .slider {
+    width: 90%;
+  }
 }
 
 @media (max-width: 1080px) {
@@ -1067,6 +1080,18 @@ button {
   .hero-demo-form-container {
     padding: 24px;
     /* height: auto; */
+  }
+  h3 {
+    font-size: 36px;
+    line-height: 48px;
+  }
+  h4 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .padding-y {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 }
 
@@ -1091,7 +1116,7 @@ button {
 @media (max-width: 768px) {
   .content-wrapper {
     flex-direction: column-reverse; /* Form on top */
-    padding: 40px 20px;
+    padding: 40px 32px;
     gap: 48px;
     align-items: center;
   }
@@ -1104,8 +1129,13 @@ button {
     text-align: left;
   }
   .hero-trust-logos {
-    justify-content: flex-start; /* Kept left aligned */
+    width: 100%;
+    justify-content: center; /* Kept left aligned */
     margin: 40px 0; /* Updated to match user's new base margin */
+  }
+  .hero-trust-logos img {
+    width: auto;
+    height: 56px;
   }
   .form-row {
     flex-direction: column;
@@ -1135,8 +1165,8 @@ button {
     line-height: 32px;
   }
   .hero-demo-form-container {
-    border-radius: 20px;
-    padding: 24px 16px;
+    /* border-radius: 20px; */
+    padding: 24px;
   }
   .hero-bullets {
     margin: 24px 0 32px;
@@ -1144,6 +1174,10 @@ button {
   .bullet-item span {
     font-size: 16px;
     line-height: 24px;
+  }
+  .slider {
+    width: 100%;
+    margin: 30px auto;
   }
 }
 /* Slider Gradient Shadow */
@@ -1202,6 +1236,12 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .form-footer > .btn-wrapper {
+    width: max-content;
+  }
+  .form-footer > .btn-wrapper > .blue-border-button {
+    width: max-content;
   }
   .buttons-desktop {
     display: none;
@@ -1456,7 +1496,7 @@ button {
   /* font-size inherits from section-heading/h2 */
 }
 
-.feedback-text-content .section-description {
+.feedback-text-content .text-T1 {
   text-align: left;
   margin-top: 12px;
   /* Inherits from p */
@@ -1509,6 +1549,10 @@ button {
   flex-direction: column;
   position: relative;
   /* height: 100%; */
+}
+
+.testimonial-card > .text-T1 {
+  margin: 10px 0;
 }
 
 .testimonial-header {
@@ -1574,8 +1618,16 @@ button {
     flex-direction: column;
   }
   .testimonial-photo {
-    flex: 0 0 200px;
     width: 100%;
+    height: auto;
+  }
+  .trust-logos {
+    width: 100%;
+    justify-content: center;
+  }
+  .trust-logos img {
+    height: 56px;
+    width: auto;
   }
   .feedback-text-content .section-heading {
     font-size: 32px;
@@ -1817,7 +1869,7 @@ button {
 /* ========== FOOTER SECTION ========== */
 
 .footer {
-  background-color: #fafafa;
+  background-color: #f5f5f5;
   padding-top: 80px;
   padding-bottom: 40px;
 }
@@ -1940,9 +1992,19 @@ button {
     align-items: center;
     text-align: center;
   }
+
+  .footer {
+    padding: 32px;
+    background-color: #fff;
+  }
+  .footer > .container {
+    background-color: #f5f5f5;
+    padding: 24px;
+    border-radius: 12px;
+  }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 400px) {
   .footer-links-grid {
     grid-template-columns: 1fr;
   }
