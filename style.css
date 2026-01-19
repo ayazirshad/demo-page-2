@@ -430,6 +430,12 @@ p {
   background-color: var(--color-accent-hover);
 }
 
+@media (min-width: 1440px) {
+  .nav-links {
+    margin-left: 160px;
+  }
+}
+
 @media (min-width: 1200px) {
   .nav-links {
     margin-left: 200px;
