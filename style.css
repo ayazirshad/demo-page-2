@@ -1572,6 +1572,23 @@ button {
   object-fit: cover;
 }
 
+.photo-desktop {
+  display: block;
+}
+
+.photo-mobile {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .photo-desktop {
+    display: none;
+  }
+  .photo-mobile {
+    display: block;
+  }
+}
+
 .testimonial-card {
   flex: 1;
   background: #f9fafb;
@@ -2069,7 +2086,7 @@ button {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 370px) {
   .footer-links-grid {
     grid-template-columns: 1fr;
   }
