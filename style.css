@@ -237,7 +237,7 @@ ul {
 h1 {
   font-family: var(--font-primary);
   font-weight: 600;
-  font-size: 60px;
+  font-size: 58px;
   line-height: 72px;
   letter-spacing: -2%;
   color: var(--color-text-primary);
@@ -897,7 +897,7 @@ button {
 }
 
 .hero-trust-logos img {
-  height: 42px;
+  height: 63px;
   width: auto;
 }
 
@@ -1113,6 +1113,10 @@ button {
   }
   .form-info-card {
     width: 100%;
+  }
+  .hero-trust-logos img {
+    height: 42px;
+    width: auto;
   }
   .form-title {
     font-size: 40px;
@@ -1548,7 +1552,7 @@ button {
 }
 
 .trust-logos img {
-  height: 40px;
+  height: 65px;
   width: auto;
 }
 
@@ -1592,6 +1596,13 @@ button {
   }
   .photo-mobile {
     display: block;
+  }
+}
+
+@media (max-width: 1020px) {
+  .trust-logos img {
+    height: 40px;
+    width: auto;
   }
 }
 
