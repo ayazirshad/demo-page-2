@@ -776,9 +776,15 @@ button {
   left: 0;
   width: 100%;
   z-index: -1;
-  height: 90vh;
+  height: 100%; /* Default match hero height */
   overflow: hidden;
   pointer-events: none;
+}
+
+@media (min-width: 1920px) {
+  .bg-rod-container {
+    height: 90vh;
+  }
 }
 
 .bg-rod-1,
@@ -865,7 +871,7 @@ button {
   display: flex;
   gap: 24px;
   align-items: center;
-  margin-top: 100px;
+  margin: 40px 0;
 }
 
 .hero-trust-logos img {
@@ -890,13 +896,14 @@ button {
 
 /* Demo Form Container */
 .hero-demo-form-container {
+  flex: 1;
   display: flex;
   background: rgba(248, 251, 255, 0.3);
   backdrop-filter: blur(10px);
   border-radius: 32px;
   box-shadow: 0 0 55.7px 0 rgba(126, 168, 251, 0.4);
-  max-width: 768px;
-  height: 604px;
+  /* min-height: 604px;  */
+  height: min-content;
   margin: 0;
   width: 100%;
   z-index: 10;
@@ -1030,19 +1037,48 @@ button {
   } /* 100px width + 30px gap */
 }
 
+@media (max-width: 1440px) {
+  .content-wrapper {
+    padding: 60px 80px;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .content-wrapper {
+    padding: 40px 60px;
+    gap: 30px;
+  }
+  .main-heading {
+    font-size: 48px;
+    line-height: 56px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .content-wrapper {
+    padding: 40px;
+    gap: 24px;
+  }
+  .left-content h4 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .hero-demo-form-container {
+    padding: 24px;
+    /* height: auto; */
+  }
+}
+
 @media (max-width: 1024px) {
   .hero-demo-form-container {
-    flex-direction: column;
-    gap: 20px;
+    height: min-content;
   }
   .form-info-card {
     width: 100%;
   }
   .form-title {
     font-size: 40px;
-  }
-  .main-heading {
-    font-size: 48px;
   }
   .hero-section {
     padding-bottom: 0;
@@ -1053,18 +1089,61 @@ button {
 }
 
 @media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column-reverse; /* Form on top */
+    padding: 40px 20px;
+    gap: 48px;
+    align-items: center;
+  }
+  .left-content {
+    text-align: left; /* Kept left aligned per user request */
+    align-items: flex-start;
+  }
+  .hero-bullets {
+    align-items: flex-start;
+    text-align: left;
+  }
+  .hero-trust-logos {
+    justify-content: flex-start; /* Kept left aligned */
+    margin: 40px 0; /* Updated to match user's new base margin */
+  }
   .form-row {
     flex-direction: column;
+    gap: 24px;
   }
-  .form-info-card,
-  .form-fields-wrapper {
-    padding: 30px 20px;
+  .hero-demo-form-container {
+    max-width: 100%;
+    padding: 32px 24px;
+    min-height: auto; /* Reset min-height */
   }
   .form-title {
     font-size: 32px;
   }
   .main-heading {
-    font-size: 36px;
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-heading {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .left-content h4 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .hero-demo-form-container {
+    border-radius: 20px;
+    padding: 24px 16px;
+  }
+  .hero-bullets {
+    margin: 24px 0 32px;
+  }
+  .bullet-item span {
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 /* Slider Gradient Shadow */
