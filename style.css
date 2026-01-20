@@ -1113,7 +1113,7 @@ button {
 .slide-track {
   display: flex;
   gap: 70px;
-  animation: scroll 30s linear infinite;
+  /* animation: scroll 30s linear infinite; */
 }
 
 .slide {
@@ -1133,7 +1133,7 @@ button {
 }
 
 .slide img:hover {
-  transform: translateZ(20px);
+  /* transform: translateZ(20px); */
 }
 
 @keyframes scroll {
