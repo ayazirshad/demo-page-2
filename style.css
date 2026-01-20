@@ -349,7 +349,7 @@ p {
   .text-B2 {
     font-size: 13px;
     color: #535862;
-    font-weight: 800;
+    font-weight: 500;
   }
 }
 
@@ -757,9 +757,9 @@ button {
   white-space: nowrap;
 }
 
-.blue-button a {
+/* .blue-button a {
   transform: translate(0px, -2px);
-}
+} */
 
 .blue-button:hover {
   background: #4e6be9;
@@ -2160,6 +2160,7 @@ button {
   font-size: 16px;
   max-width: 398px;
   line-height: 26px;
+  color: #535862;
 }
 
 .footer-logo {
@@ -2202,7 +2203,7 @@ button {
   font-weight: 500;
   line-height: 20px;
   margin-bottom: 0;
-  color: #0b1220;
+  color: #535862;
   transition: color 0.3s ease;
 }
 
