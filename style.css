@@ -359,6 +359,14 @@ p {
   }
 }
 
+@media (max-width: 768px) {
+  .text-B2 {
+    font-size: 16px;
+    color: #535862;
+    font-weight: 500;
+  }
+}
+
 /* ========== Z-INDEX ========== */
 .z-10 {
   z-index: 10;
@@ -431,7 +439,7 @@ p {
   line-height: 24px;
   color: #535862;
   padding: 16px var(--section-px);
-  border-bottom: 1px solid #E9EAEB;
+  border-bottom: 1px solid #e9eaeb;
 }
 
 .h-screen {
@@ -873,7 +881,7 @@ button {
   display: none;
   background-image: url("assets/hero-section/Vector-3.png");
   background-repeat: no-repeat;
-  }
+}
 
 @media (max-width: 1024px) {
   .bg-rod-1 {
@@ -885,37 +893,37 @@ button {
   }
 
   .bg-rod-1-mobile {
-  bottom: -70%;
-  left: -20%;
-  transform: rotate(-45deg);
-  width: 200px;
-  height: 120%;
-  background-color: #4e69e69a;
-  filter: blur(100px);
-  opacity: 0.5;
-}
+    bottom: -70%;
+    left: -20%;
+    transform: rotate(-45deg);
+    width: 200px;
+    height: 120%;
+    background-color: #4e69e69a;
+    filter: blur(100px);
+    opacity: 0.5;
+  }
 
-.bg-rod-2-mobile {
-  bottom: -50%;
-  right: 15%;
-  transform: rotate(-55deg);
-  width: 250px;
-  height: 70%;
-  background-color: #4e69e69a;
-  filter: blur(100px);
-  opacity: 0.5;
-}
+  .bg-rod-2-mobile {
+    bottom: -50%;
+    right: 15%;
+    transform: rotate(-55deg);
+    width: 250px;
+    height: 70%;
+    background-color: #4e69e69a;
+    filter: blur(100px);
+    opacity: 0.5;
+  }
 
-.bg-rod-3-mobile {
-  top: 30%;
-  right: 10%;
-  width: 170px;
-  height: 80%;
-  transform: rotate(-55deg);
-  background-color: #4e69e69a;
-  filter: blur(100px);
-  opacity: 0.5;
-}
+  .bg-rod-3-mobile {
+    top: 30%;
+    right: 10%;
+    width: 170px;
+    height: 80%;
+    transform: rotate(-55deg);
+    background-color: #4e69e69a;
+    filter: blur(100px);
+    opacity: 0.5;
+  }
 }
 
 .content-wrapper {
@@ -1241,7 +1249,6 @@ button {
 }
 
 @media (max-width: 768px) {
-
   .logo-stack {
     margin-bottom: 30px;
   }
@@ -1544,7 +1551,8 @@ button {
   left: 0;
   width: 33.33%;
   height: 100%;
-  background: url("assets/card-section/left-side.png") no-repeat left center / contain;
+  background: url("assets/card-section/left-side.png") no-repeat left center /
+    contain;
 }
 
 .circle-2 {
@@ -1562,22 +1570,25 @@ button {
   right: 0;
   width: 33.33%;
   height: 130vh;
-  background: url("assets/card-section/right-side.png") no-repeat right top / contain;
+  background: url("assets/card-section/right-side.png") no-repeat right top /
+    contain;
 }
 
-@media (max-width:1000px) {
-  .circle-1, .circle-2, .circle-3  {
+@media (max-width: 1000px) {
+  .circle-1,
+  .circle-2,
+  .circle-3 {
     display: none;
   }
 
   .blur-circle {
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
-  filter: blur(200px);
-  opacity: 0.6;
-}
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    filter: blur(200px);
+    opacity: 0.6;
+  }
 
   .circle-mobile-1 {
     background: #4e6bea;
@@ -1623,7 +1634,7 @@ button {
 .card-desc {
   padding: 0px 28px;
   margin-bottom: 10px;
-  color: #181D27;
+  color: #181d27;
 }
 
 .card-main-img {
@@ -1639,7 +1650,7 @@ button {
 }
 
 @media (max-width: 1536px) {
- .card-heading {
+  .card-heading {
     font-size: 24px;
   }
 
@@ -1739,10 +1750,9 @@ button {
 }
 
 @media (max-width: 1536px) {
-
   .testimonial-card .text-T1 {
     font-size: 16px;
-    color: #45556C;
+    color: #45556c;
     line-height: 27px;
     vertical-align: middle;
   }
@@ -2214,7 +2224,7 @@ button {
 .divider {
   width: 100%;
   height: 1px;
-  background-color: #CCCCCC;
+  background-color: #cccccc;
   margin: 24px 0;
 }
 
