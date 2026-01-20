@@ -17,7 +17,7 @@
     <header class="navbar">
       <div class="nav-container">
         <div class="logo-wrapper">
-          <img src="assets/sorsx_logo_black.png" alt="logo" class="logo" />
+          <img src="assets/SorsX-Logo-Black.svg" alt="logo" class="logo" />
         </div>
 
         <nav class="nav-links" id="mobileMenu">
@@ -159,7 +159,9 @@
       <div class="bg-rod-container">
         <div class="bg-rod-1"></div>
         <div class="bg-rod-2"></div>
-        <div class="bg-rod-3"></div>
+        <div class="bg-rod-1-mobile"></div>
+        <div class="bg-rod-2-mobile"></div>
+        <div class="bg-rod-3-mobile"></div>
       </div>
       <div class="content-wrapper container">
         <div class="left-content">
@@ -225,8 +227,8 @@
             </li>
           </ul>
           <div class="hero-trust-logos">
-            <img src="assets/demo_logo_1.png" alt="Capterra" />
-            <img src="assets/demo_logo_2.png" alt="Software Advice" />
+            <img src="assets/capterra.svg" alt="Capterra" />
+            <img src="assets/software-advice.svg" alt="Software Advice" />
           </div>
         </div>
 
@@ -389,11 +391,15 @@
     </div>
 
     <!-- cards section -->
-    <section class="cards-section padding-y">
+    <section class="cards-section">
       <div class="bg-blur-circles">
-        <div class="blur-circle circle-1"></div>
-        <div class="blur-circle circle-2"></div>
-        <div class="blur-circle circle-3"></div>
+        <div class="circle-1"></div>
+        <div class="circle-2"></div>
+        <div class="circle-3"></div>
+        
+        <div class="blur-circle circle-mobile-1"></div>
+        <div class="blur-circle circle-mobile-2"></div>
+        <div class="blur-circle circle-mobile-3"></div>
       </div>
       <div class="container grid-cards">
         <!-- Card 1 -->
@@ -463,8 +469,8 @@
           </p>
         </div>
         <div class="trust-logos">
-          <img src="assets/demo_logo_1.png" alt="Capterra" />
-          <img src="assets/demo_logo_2.png" alt="Software Advice" />
+          <img src="assets/demo_logo_1.png" class="capterra" alt="Capterra" />
+          <img src="assets/demo_logo_2.png" class="software" alt="Software Advice" />
         </div>
       </div>
 
@@ -473,12 +479,12 @@
         <div class="testimonial-item">
           <div class="testimonial-photo">
             <img
-              src="assets/ceo_img.png"
+              src="assets/Violet-Herin.svg"
               alt="Violet Herin"
               class="photo-desktop"
             />
             <img
-              src="assets/ceo_img_2.png"
+              src="assets/Violet-Herin.svg"
               alt="Violet Herin"
               class="photo-mobile"
             />
@@ -489,7 +495,7 @@
                 <h4 class="text-L1">Violet Herin</h4>
                 <p class="text-L2">CEO, Projé Inc.</p>
               </div>
-              <span class="quote-icon">“</span>
+              <img src="assets/quote-icon.svg" alt="qoute" />
             </div>
             <p class="text-T1">
               It has truly been a game-changer in expediting screening and first
@@ -497,7 +503,7 @@
               decisions.
             </p>
             <div class="testimonial-company">
-              <img src="assets/hero-logo-Proje.png" alt="Proje Logo" />
+              <img src="assets/proje.svg" alt="Proje Logo" />
             </div>
           </div>
         </div>
@@ -524,7 +530,7 @@
                   People and Culture Manager, Dalgakıran Kompresör
                 </p>
               </div>
-              <span class="quote-icon">“</span>
+              <img src="assets/quote-icon.svg" alt="qoute" />
             </div>
             <p class="text-T1">
               SorsX AI recruitment software automated screening and AI video
@@ -532,7 +538,7 @@
               shortlists fast.
             </p>
             <div class="testimonial-company">
-              <img src="assets/dalgakiran_icon.png" alt="Dalgakıran Logo" />
+              <img src="assets/Dalgakiran.svg" alt="Dalgakıran Logo" />
             </div>
           </div>
         </div>
@@ -606,18 +612,30 @@
             </div>
           </div>
         </div>
+        <div class="divider"></div>
         <div class="footer-bottom">
           <p class="copyright">© 2026 SorsX. All rights reserved.</p>
           <div class="social-links">
-            <a href="#"><img src="assets/insta_icon.png" alt="Instagram" /></a>
+            <a href="#"><img src="assets/instagram.svg" alt="Instagram" /></a>
             <a href="#"
-              ><img src="assets/linkedin_icon.png" alt="LinkedIn"
+              ><img src="assets/linkedIn.svg" alt="LinkedIn"
             /></a>
           </div>
         </div>
       </div>
     </footer>
 
+    <script>
+      const navbar = document.querySelector(".navbar");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add("navbar--scrolled");
+        } else {
+          navbar.classList.remove("navbar--scrolled");
+        }
+      });
+    </script>
     <script src="script.js"></script>
   </body>
 </html>
