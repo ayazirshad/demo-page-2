@@ -1132,9 +1132,9 @@ button {
   transition: transform 0.3s;
 }
 
-.slide img:hover {
-  /* transform: translateZ(20px); */
-}
+/* .slide img:hover {
+  transform: translateZ(20px);
+} */
 
 @keyframes scroll {
   0% {
