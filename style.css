@@ -6,6 +6,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Matter";
+  src: url("assets/fonts/matter-light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ========== DESIGN TOKENS ========== */
 :root {
   /* Fonts */
@@ -1031,6 +1039,8 @@ button {
 
 .bullet-item span {
   font-size: clamp(14px, 1.1vw, 18px);
+  font-family: "Matter";
+  font-weight: 300;
   line-height: 1.5;
 }
 
@@ -1746,6 +1756,8 @@ button {
 
 .card-desc {
   padding: 0px 28px;
+  font-family: "Matter";
+  font-weight: 300;
   margin-bottom: 10px;
   color: #181d27;
 }
